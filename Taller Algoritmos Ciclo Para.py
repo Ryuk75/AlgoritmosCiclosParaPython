@@ -120,3 +120,35 @@ else:
     horaextra = horas-40
     pago = 40*20 + (horaextra*25)
     print("El trabajador trabajó ",horas," horas y se le pagará: ",pago)
+print("")
+
+#4. Calcular el promedio de edades de hombres, mujeres y
+#de todo un grupo de alumnos.
+print(" 4/ Calcular el promedio de edades de hombres, mujeres y de todo un grupo de alumnos.")
+edadF = 0
+edadM = 0
+numeroF = 0
+numeroM = 0
+numeroAlumnos = int(input("El total de alumnos es: "))
+for i in range(numeroAlumnos):
+    print("Escoja sexo \n"
+          "F o f para femenino \n"
+          "M o m para Masculino \n")
+    sexo = input(":")
+    edad = int(input("Su edad es: "))
+    if sexo == "f" or sexo == "F":
+        edadF = edadF + edad
+        numeroF += 1
+    if sexo == "m" or sexo == "M":
+        edadM = edadM + edad
+        numeroM += 1
+    else: 
+        print("Digito invalido")
+
+promedioF = edadF / numeroF
+promedioM = edadM / numeroM
+promTotal = (edadF + edadM)/numeroAlumnos
+print("El promedio de edades en mujeres es: ",promedioF)
+print("El promedio de edades en hombres es: ",promedioM)
+print("El promedio de edades en total es: ",promTotal)
+print("")

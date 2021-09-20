@@ -152,3 +152,18 @@ print("El promedio de edades en mujeres es: ",promedioF)
 print("El promedio de edades en hombres es: ",promedioM)
 print("El promedio de edades en total es: ",promTotal)
 print("")
+
+#5. Encontrar el menor valor de un conjunto de n números dados
+print("5/ Encontrar el menor valor de un conjunto de n números dados")
+numC = int(input("Digite cantidad de numeros: "))
+num = []
+for i in range(numC):
+     num.append(int(input("Digite un numero: ")))
+menor = num[0]
+for i in range(numC):
+    if num[i] < menor:
+        menor = num[i]
+print("\n")
+print("El número más pequeño es: " + str(menor))
+print("")
+

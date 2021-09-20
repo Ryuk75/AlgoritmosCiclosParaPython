@@ -268,3 +268,33 @@ for i in range(vendedores):
     else: 
         print("No obtiene comisiones")
 print("")
+
+#10. La empresa Encuestas S.A desea crear una función que les permita conocer de los 50.000 votos obtenidos por 3
+#candidatos, cual de estos fue el ganador o indicar si
+#hubo empate y la cantidad de votos obtenidos.
+import random
+print("10/ Determinar el ganador con los 50.000 votos obtenidos")
+aux1= 0
+aux2= 0
+aux3= 0
+for i in range(50000):
+    votos = random.randint(1,3)
+    if votos == 1:
+        aux1 += 1
+    elif votos == 2:
+        aux2 += 1
+    else:
+        aux3 += 1
+if aux1 == aux2 and aux1 == aux3:
+    print("Hay un empate entre los tres candidatos")
+elif aux1 > aux2 and aux1 > aux3:
+    print("El ganador fue el primer candidato")
+elif aux2 > aux1 and aux2 > aux3:
+    print("El ganador fue el segundo candidato")
+elif aux3 > aux2 and aux3 > aux1:
+    print("El ganador fue el tercer candidato")
+        
+print("Total de votos para el primer candidato: ",aux1)
+print("Total de votos para el segundo candidato: ",aux2)
+print("Total de votos para el tercer candidato: ",aux3)
+print("")

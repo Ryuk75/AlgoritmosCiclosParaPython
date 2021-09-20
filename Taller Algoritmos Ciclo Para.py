@@ -238,3 +238,33 @@ for i in range(totalPersonas):
         cont = cont + descuento
 print("El teatro ha dado en descuentos: $",cont)
 print("")
+
+#9. Kia Autos premia anualmente a sus mejores vendedores de acuerdo a la siguiente informacion:
+# -Menor o igual que 20 Millones --> 10%
+# -Mayor de 20 Millones y menor de 40 Millones --> 15%
+# -Mayor o igual de 40 Millones y menor de 80 Millones --> 20%
+# -Mayor o igual de 80 millones y menor de 160 Millones --> 25%
+# -De 160 Millones en adelante --> 30%
+#Realice un método que diga cuanto vendió y la comisión de los 100 vendedores que tiene la empresa.
+print("9/ Determine la comision de los vendedores segun lo que vendió: ")
+vendedores = 100
+for i in range(vendedores):
+    vendido = int(input("Digite cuantos millones vendió en el año: "))
+    if vendido <= 20:
+        comision = vendido * 0.10
+        print("Su comisión fue de: ",comision," millones")
+    elif vendido > 20 and vendido < 40:
+        comision = vendido * 0.15
+        print("Su comisión fue de: ",comision," millones")
+    elif vendido >= 40 and vendido < 80:
+        comision = vendido * 0.20
+        print("Su comisión fue de: ",comision," millones")
+    elif vendido >= 80 and vendido < 160:
+        comision = vendido * 0.25
+        print("Su comisión fue de: ",comision," millones")
+    elif vendido >= 160:
+        comision = vendido * 0.30
+        print("Su comisión fue de: ",comision," millones")
+    else: 
+        print("No obtiene comisiones")
+print("")

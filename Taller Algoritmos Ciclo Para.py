@@ -208,3 +208,33 @@ for i in range(numProductos):
     print("El valor total de este producto es: $", valor)
 print("El total de la compra es: $",cont)
 print("")
+
+#8. Un teatro otorga descuentos según la edad del cliente, determinar la
+#cantidad del dinero que el teatro deja de percibir por cada ua de las
+#categorias. Tomar en cuenta que los niños menores de 5 años no pueden
+#entrar al teatro y que existe un precio único en los asientos. 
+print("8/ Determinar el dinero que el teatro ha dado en descuentos: ")
+cont = 0
+precio = int(input("Digite el precio de los asientos sin descuento:"))
+totalPersonas = int(input("Total de personas que han ingresado al teatro: "))
+for i in range(totalPersonas):
+    edad = int(input("Digite edad de la persona: "))
+    if edad < 5:
+        print("No puede ingresar al teatro")
+    elif edad >= 5 and edad <= 14:
+        descuento = precio * 0.35
+        cont = cont + descuento
+    elif edad >=15 and edad <= 19:
+        descuento = precio * 0.25
+        cont = cont + descuento
+    elif edad >=20 and edad <= 45:
+        descuento = precio * 0.10
+        cont = cont + descuento
+    elif edad >=46 and edad <= 65:
+        descuento = precio * 0.25
+        cont = cont + descuento
+    elif edad >= 66:
+        descuento = precio * 0.35
+        cont = cont + descuento
+print("El teatro ha dado en descuentos: $",cont)
+print("")

@@ -191,3 +191,20 @@ else:
    print("Esta persona bajó ",diferencia," kg")
 print("")
 
+#7. En un supermercado una ama de casa pone en su carrito los artículos que va tomando de los estantes. La señora
+#quiere asegurarse de que el cajero le cobre bien lo que ella ha comprado, por lo que cada vez que toma un articulo
+#anota su precio junto con la cantidad de artículos
+#iguales que ha tomado y determina cuanto dinero gastará en ese artículo; a esto le suma lo que irá gastando en los
+#demás artículos, hasta que decide que ya tomó todo lo que
+#necesitaba. Ayúdele a esta señora a obtener el total de su compra.
+print("7/ Determine el total de la compra: ")
+cont = 0
+numProductos = int(input("Digite el numero de productos a comprar sin contar si se llevan varios del mismo: "))
+for i in range(numProductos):
+    num = int(input("Digite el numero de paquetes que se llevara de este producto: "))
+    precio = int(input("Digite el precio del producto individualmente: "))
+    valor = num*precio
+    cont = cont + valor
+    print("El valor total de este producto es: $", valor)
+print("El total de la compra es: $",cont)
+print("")

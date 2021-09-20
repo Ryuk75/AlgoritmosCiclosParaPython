@@ -105,3 +105,18 @@ print("Porcentaje en la edad de 0 a 1 años es: ",porcentaje0_1)
 print("Porcentaje en la edad de 1 a 2 años es: ",porcentaje1_2)
 print("Porcentaje en la edad de 3 o más años: ",porcentaje3)
 print("")
+
+#3. Una empresa se requiere calcular el salario semanal de cada uno de los n
+#obreros que laboran en ella. El salario se obtiene de la siguiente forma:
+#a. Si el obrero trabaja 40 horas o menos se le paga $20 por hora
+#b. Si trabaja mas de 40 horas se le paga $20 por cada una de las primeras 40 horas y $25 por cada hora extra.
+
+print("3/ Determine el salario semanal de los obreros:")
+horas = int(input("Cuantas horas trabajó el obrero: "))
+if horas <= 40:
+    pago = horas*20
+    print("El trabajador trabajó ",horas," horas y se le pagará: ",pago)
+else:
+    horaextra = horas-40
+    pago = 40*20 + (horaextra*25)
+    print("El trabajador trabajó ",horas," horas y se le pagará: ",pago)

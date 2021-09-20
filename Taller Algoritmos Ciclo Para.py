@@ -45,3 +45,63 @@ print("Carros con calcomania verde: ",verde)
 print("Carros con calcomania azul: ",azul)
 print("")
 
+#2. Un Zoólogo pretende determinar el porcentaje de animales que hay en las
+#siguiente categorias de edades: 0 a 1 año, de mas de 1 año y menos de 3 y
+#de 3 o mas años. El zoológico todavía no está seguro del animal que va
+#estudiar. Si se decide por elefantes solo tomará una muestra de 20 de ellos;
+#si se decide por jirafas, tomara 15 de muestras y si son chompancés tomará 40.
+print("2/ Determinar el porcentaje de animales que hay en categorias de edades:")
+porcentaje0_1 = 0
+porcentaje1_2 = 0
+porcentaje3 = 0
+
+print("Escoja el animal a estudiar: \n"
+      "1. Elefante \n"
+      "2. Jirafa \n"
+      "3. Chimpance")
+estudio = int(input(":"))
+if estudio == 1:
+    print("Se escogio elefante")
+    cantidad = 20
+    for i in range(cantidad):
+        edad = int(input("Ingrese la edad de la Elefante: "))
+        if edad >= 0 and edad <= 1:
+            porcentaje0_1 += 1
+        elif edad == 2:
+            porcentaje1_2 += 1
+        elif edad >= 3:
+            porcentaje3 += 1
+if estudio == 2:
+    print("Se escogio jirafa")
+    cantidad = 15
+    for i in range(cantidad):
+        edad = int(input("Ingrese la edad de la Jirafa: "))
+        if edad >= 0 and edad <= 1:
+            porcentaje0_1 += 1
+        elif edad == 2:
+            porcentaje1_2 += 1
+        elif edad >= 3:
+            porcentaje3 += 1
+if estudio == 3:
+    print("Se escogio Chimpance")
+    cantidad = 40
+    for i in range(cantidad):
+        edad = int(input("Ingrese la edad de el Chimpance: "))
+        if edad >= 0 and edad <= 1:
+            porcentaje0_1 += 1
+        elif edad == 2:
+            porcentaje1_2 += 1
+        elif edad >= 3:
+            porcentaje3 += 1
+else: 
+    print("Escoja un número válido")
+    
+porcentaje0_1 = (porcentaje0_1*100)/cantidad
+porcentaje1_2 = (porcentaje1_2*100)/cantidad
+porcentaje3 = (porcentaje3*100)/cantidad
+
+print("Porcentajes de las edades de el animal que se escogió: ")
+print("Porcentaje en la edad de 0 a 1 años es: ",porcentaje0_1)
+print("Porcentaje en la edad de 1 a 2 años es: ",porcentaje1_2)
+print("Porcentaje en la edad de 3 o más años: ",porcentaje3)
+print("")
